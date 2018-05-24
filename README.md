@@ -43,6 +43,12 @@ Edit the source file to make changes:
 $ vi src/main/java/org/examples/java/App.java
 ```
 
+Make sure that your change is error free and working before a commit:
+```
+$ mvn package
+$ mvn exec:java
+```
+
 Commit the change to Git locally:
 ```
 $ git commit src/main/java/org/examples/java/App.java -m "Updated message"
@@ -59,3 +65,20 @@ The user credentials to access Git server can be cached locally so you won't be 
 ```
 $ git config --global credential.helper 'store --file ~/.git-creds'
 ```
+
+On the browser, see your branch listed at `https://github.com/kurianinc/docker-java-sample/branches`.
+
+Create a new PR by clicking on the `New pull request` button against your branch.
+
+A PR is essenatially a merge between two branches, usually a merge of feature branch into the parent branch it based on. In this sample case, merging `tk-change-message` into `master`.
+
+A PR is reviewed and approved by team members prior to merging.
+
+Common practices, usually called Git Flow:
+- A repo will have branches `master` and 'develop`, `master` representing code in production and `develop` representing ongoing development work.
+- Feature branches are created off `develop` and those will be merged into `develop` after testing.
+- Prior to pushing code to production, `develop` is merged into `master`.
+- For hot-fixes in production branches are created off `master` and merge such changes into both `develop` and `master`.
+
+
+
