@@ -32,10 +32,10 @@ $ git branch
 * master
 ```
 
-Create a new branch `tk-change-message` off the current branch `master`, and, make that current:
+Create a new branch `YOUR-BRANCH-NAME` (example: `tk-change-message`) off the current branch `master`, and, make that current:
 ```
-$ git branch tk-change-message
-$ git checkout tk-change-message
+$ git branch YOUR-BRANCH-NAME
+$ git checkout YOUR-BRANCH-NAME
 ```
 
 Edit the source file to make changes:
@@ -56,7 +56,7 @@ $ git commit src/main/java/org/examples/java/App.java -m "Updated message"
 
 Push the committed changes to Git server:
 ```
-$ git push --set-upstream origin tk-change-message # First time after the branch is created
+$ git push --set-upstream origin YOUR-BRANCH-NAME # First time after the branch is created
 $ git push # Subsequent code pushes to remote server
 ```
 
@@ -70,7 +70,7 @@ On the browser, see your branch listed at `https://github.com/kurianinc/docker-j
 
 Create a new PR by clicking on the `New pull request` button against your branch.
 
-A PR is essenatially a merge between two branches, usually a merge of feature branch into the parent branch it based on. In this sample case, merging `tk-change-message` into `master`.
+A PR is essenatially a merge between two branches, usually a merge of feature branch into the parent branch it based on. In this sample case, merging `YOUR-BRANCH-NAME` (example: `tk-change-message`) into `master`.
 
 A PR is reviewed and approved by team members prior to merging.
 
